@@ -70,7 +70,7 @@ net = dde.nn.FNN([2] + [100] * 4 + [1], "tanh", "Glorot normal")
 # Model compilation
 model = dde.Model(data, net)
 
-LOSS_WEIGHTS = [10, 1, 1, 1000, 1000]  # Weights for different components of the loss function
+LOSS_WEIGHTS = [10, 1, 1, 10, 1000]  # Weights for different components of the loss function
 BATCH_SIZE = 32  # Batch size
 LEARNING_RATE = 1e-4  # Learning rate
 
@@ -107,7 +107,7 @@ losshistory, train_state =model.train()
 print("Estimated gamma_2:", gamma_2.value().numpy())
 
 iteration = 1
-Max_iterations = 1
+Max_iterations = 5
 error = 1  # Start with a high error
 # Initialize a list to store gamma values and iterations
 gamma_values = []
