@@ -16,7 +16,7 @@ geomtime = dde.geometry.GeometryXTime(geom, timedomain)
 
 
 # Define gamma_2 as a trainable variable with an initial value
-gamma_2 = dde.Variable(4.0)
+gamma_2 = dde.Variable(5.0)
 # Allen-Cahn equation
 def allen_cahn(x, y):
     dy_t = dde.grad.jacobian(y, x, i=0, j=1)
